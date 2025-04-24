@@ -11,7 +11,7 @@ deployAs:
       standardConfiguration:
         - key: CTP_PROJECT_KEY
           description: commercetools project key
-          required: true
+          required: false
         - key: CTP_AUTH_URL
           description: commercetools Auth URL (example - https://auth.europe-west1.gcp.commercetools.com).
           required: true
