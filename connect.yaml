@@ -29,29 +29,14 @@ deployAs:
           description: JWT Issuer for jwt validation (example - https://mc-api.europe-west1.gcp.commercetools.com)
           required: true
           default: https://mc-api.europe-west1.gcp.commercetools.com
-        - key: STRIPE_CAPTURE_METHOD
-          description: Stripe capture method (example - manual|automatic).
-          default: automatic
-        - key: STRIPE_WEBHOOK_ID
-          description: Stripe unique identifier for the Webhook Endpoints (example - we_*****).
+        - key: NOVALNET_PRIVATE_KEY
+          description: Novalnet unique identifier.
           required: true
-        - key: STRIPE_APPEARANCE_PAYMENT_ELEMENT
-          description: Stripe Appearance for Payment Element (example - "{\"theme\":\"stripe\",\"variables\":{\"colorPrimary\":\"#0570DE\",\"colorBackground\":\"#FFFFFF\",\"colorText\":\"#30313D\",\"colorDanger\":\"#DF1B41\",\"fontFamily\":\"Ideal Sans,system-ui,sansserif\",\"spacingUnit\":\"2px\",\"borderRadius\":\"4px\"}}").
-        - key: STRIPE_APPEARANCE_EXPRESS_CHECKOUT
-          description: Stripe Appearance for Express Checkout (example - "{\"theme\":\"stripe\",\"variables\":{\"colorPrimary\":\"#0570DE\",\"colorBackground\":\"#FFFFFF\",\"colorText\":\"#30313D\",\"colorDanger\":\"#DF1B41\",\"fontFamily\":\"Ideal Sans,system-ui,sansserif\",\"spacingUnit\":\"2px\",\"borderRadius\":\"4px\"}}").
-        - key: STRIPE_LAYOUT
-          description: Stripe Layout for Payment Element (example - {"type":"accordion","defaultCollapsed":false,"radios":true,"spacedAccordionItems":false} ).
-          default: '{"type":"tabs","defaultCollapsed":false}'
-        - key: STRIPE_PUBLISHABLE_KEY
-          description: Stripe Publishable Key
+        - key: NOVALNET_PUBLIC_KEY
+          description: Novalnet unique identifier.
           required: true
-        - key: STRIPE_APPLE_PAY_WELL_KNOWN
-          description: Domain association file from Stripe. (example - https://stripe.com/files/apple-pay/apple-developer-merchantid-domain-association)
-        - key: STRIPE_SAVED_PAYMENT_METHODS_CONFIG
-          description: Stripe configuration for saved payment methods (example - {"payment_method_save":"enabled","payment_method_save_usage":"off_session","payment_method_redisplay":"enabled","payment_method_redisplay_limit":10}).
-          default: '{"payment_method_save":"disabled"}'
-        - key: MERCHANT_RETURN_URL
-          description: Merchant return URL
+        - key: NOVALNET_TARIFF_KEY
+          description: Novalnet unique identifier.
           required: true
       securedConfiguration:
         - key: CTP_CLIENT_SECRET
@@ -59,10 +44,4 @@ deployAs:
           required: true
         - key: CTP_CLIENT_ID
           description: commercetools client ID with manage_payments, manage_orders, view_sessions, view_api_clients, manage_checkout_payment_intents, introspect_oauth_tokens, manage_types and view_types scopes
-          required: true
-        - key: STRIPE_SECRET_KEY
-          description: Stripe secret key (example - sk_*****).
-          required: true
-        - key: STRIPE_WEBHOOK_SIGNING_SECRET
-          description: Stripe Webhook signing secret  (example - whsec_*****).
           required: true
