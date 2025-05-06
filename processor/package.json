@@ -1,7 +1,6 @@
 {
   "name": "payment-integration-processor",
   "version": "1.0.0",
-  "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node src/main.ts",
@@ -10,13 +9,8 @@
     "connector:pre-undeploy": "node dist/connectors/pre-undeploy.js"
   },
   "dependencies": {
-    "fastify": "^5.3.0",
-    "@fastify/cors": "^10.0.1",
-    "stripe": "^17.7.0",
-    "@commercetools/connect-payments-sdk": "^0.22.0"
   },
   "devDependencies": {
     "typescript": "^5.8.2",
-    "ts-node": "^10.9.2"
   }
 }
