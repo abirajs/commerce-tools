@@ -1,12 +1,8 @@
 {
-  "name": "payment-integration-processor",
+  "name": "processor",
   "version": "1.0.0",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node src/main.ts",
-    "start": "node dist/main.js",
-    "connector:post-deploy": "node dist/connectors/post-deploy.js",
-    "connector:pre-undeploy": "node dist/connectors/pre-undeploy.js"
   },
   "dependencies": {
   },
